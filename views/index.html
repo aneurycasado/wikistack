@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+   <h3>Pages</h3>
+{% if pages.length > 0 %}
+  <ul>
+    {% for page in pages %}
+      <li>{{ page | pageLink }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  There are no pages. Why don't you <a href='/wiki/add'>add one</a>?
+{% endif %}
+{% endblock %}

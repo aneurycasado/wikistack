@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3> {{title}} <small> (<a href={{urlTitle}}>Similar</a>)</small></h3>
+  <hr>
+  <h4>By: {{name}} </h4>
+  <div class="page-body">{{content}}</div>
+  <a href="{{urlTitle}}/edit" class="btn btn-primary">edit this page</a>
+  <a href="{{urlTitle}}/delete" class="btn btn-danger">delete this page</a>
+{% endblock %}

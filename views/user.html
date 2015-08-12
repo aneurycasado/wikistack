@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h3> Hey, look at {{user.name.first}} {{user.name.last}} </h3>
+
+   <h3>Pages</h3>
+{% if pages.length > 0 %}
+  <ul>
+    {% for page in pages %}
+      <li>{{ page | pageLink }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% endblock %}
